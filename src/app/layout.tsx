@@ -1,4 +1,7 @@
+import { Montserrat } from 'next/font/google'
 import './globals.css'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang='en' className={montserrat.className}>
       <body>{children}</body>
     </html>
   )
